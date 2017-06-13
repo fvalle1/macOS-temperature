@@ -28,6 +28,11 @@ class ViewController: NSViewController {
         updateAllValues()
     }
     
+    override func viewDidAppear() {
+        self.viewDidAppear()
+        self.view.window!.title="Temperature monitor"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
