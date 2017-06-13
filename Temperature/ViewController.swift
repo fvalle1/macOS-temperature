@@ -29,7 +29,7 @@ class ViewController: NSViewController {
     }
     
     override func viewDidAppear() {
-        self.viewDidAppear()
+        super.viewDidAppear()
         self.view.window!.title="Temperature monitor"
     }
     
