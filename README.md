@@ -12,6 +12,6 @@ The app show temperature of:
 
 You should either download the entire project and build it using Xcode or simply get [The app](Temperaturemonitor.dmg)
 
-#Licence
+# Licence
 
 See [LICENCE](LICENCE)
