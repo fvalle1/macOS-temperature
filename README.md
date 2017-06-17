@@ -8,9 +8,13 @@ The app show temperature of:
 - battery
 - Hard Disk
 
-# How To use
+# Download
 
-You should either download the entire project and build it using Xcode
+[![Download macOS-temperature](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
+
+# Contribute
+
+You could download the entire project cloning this repo and build it using Xcode, pull requestes and isuues are welcome!
 
 # Licence
     Copyright (C) 2017  fvalle1
