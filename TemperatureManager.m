@@ -62,8 +62,6 @@
     return t;
 }
 
-
-
 /*
  got ok for Battery TS_MAXgot ok for Battery 1got ok for Battery 2got ok for CPU 0 Diegot ok for CPU 0 Proximitygot ok for got ok for Harddisk 0 Proximitygot ok for NB/CPU/GPU HeatPipe 1 Proximity
  */

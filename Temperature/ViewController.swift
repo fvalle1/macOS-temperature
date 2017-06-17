@@ -23,21 +23,28 @@ import Cocoa
 class ViewController: NSViewController {
     @IBOutlet weak var GetTempButton: NSButton!
    
-    @IBOutlet weak var CPUTempLabel: PositiveLabel!
-
-    @IBOutlet weak var BatteryTempLabel: PositiveLabel!
+    @IBOutlet weak var CPUTempLabel: NSTextField!
+    @IBOutlet weak var BatteryTempLabel: NSTextField!
+    @IBOutlet weak var HDTempLabel: NSTextField!
     
-    @IBOutlet weak var HDTempLabel: PositiveLabel!
+    func GetStringToSet(value: Double) -> String {
+        var string=""
+        if(value > -127){
+            string=String(value)+"°C"
+        }
+        
+        return string
+    }
     
-    func updateAllValues(){
+    func UpdateAllValues(){
         let manager=TemperatureManager()
-        CPUTempLabel.Set(value: manager.getCPUTemp())
-        BatteryTempLabel.Set(value: manager.getBatteryTemp())
-        HDTempLabel.Set(value: manager.getHDTemp())
+        CPUTempLabel.stringValue=GetStringToSet(value: manager.getCPUTemp())
+        BatteryTempLabel.stringValue=GetStringToSet(value: manager.getBatteryTemp())
+        HDTempLabel.stringValue=GetStringToSet(value: manager.getHDTemp())
     }
     
     @IBAction func UpdateButtonPushed(_ sender: Any) {
-        updateAllValues()
+        UpdateAllValues()
     }
     
     override func viewDidAppear() {
@@ -60,7 +67,7 @@ class ViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        updateAllValues()   //Your API method call
+        UpdateAllValues()   //Your API method call
     }
 
 

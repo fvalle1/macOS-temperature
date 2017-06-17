@@ -258,11 +258,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BatteryTempLabel" destination="opX-Jf-0zQ" id="u9n-It-qj1"/>
+                        <outlet property="BatteryTempLabel" destination="opX-Jf-0zQ" id="B6J-Ei-dZy"/>
                         <outlet property="BetteryTempLabel" destination="opX-Jf-0zQ" id="dIM-ql-vfD"/>
-                        <outlet property="CPUTempLabel" destination="fDV-fH-hVY" id="x8y-3t-phZ"/>
+                        <outlet property="CPUTempLabel" destination="fDV-fH-hVY" id="wXe-dy-jgh"/>
                         <outlet property="GetTempButton" destination="JnA-fh-e4e" id="0RX-8t-6fa"/>
-                        <outlet property="HDTempLabel" destination="QSK-dF-PrZ" id="Dmv-6f-M5I"/>
+                        <outlet property="HDTempLabel" destination="QSK-dF-PrZ" id="ugs-7b-dCQ"/>
                         <outlet property="TempLabel" destination="fDV-fH-hVY" id="CAC-wv-bKl"/>
                     </connections>
                 </viewController>

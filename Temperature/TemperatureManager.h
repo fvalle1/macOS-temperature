@@ -26,8 +26,6 @@
 -(double) GetBatteryTemp;
 -(double) GetHDTemp;
 
-
-
 @end
 
 #endif /* TemperatureManager_h */
