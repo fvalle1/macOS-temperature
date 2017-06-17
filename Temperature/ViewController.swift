@@ -30,20 +30,12 @@ class ViewController: NSViewController {
     @IBOutlet weak var BatteryTempLabel: NSTextField!
     @IBOutlet weak var HDTempLabel: NSTextField!
     
-    func GetStringToSet(value: Double) -> String {
-        var string="Error:-("
-        if(value > -1){
-            string=String(value)+"°C"
-        }
-        
-        return string
-    }
-    
+   
     @objc func UpdateAllValues(){
         let manager=TemperatureManager()
-        CPUTempLabel.stringValue=GetStringToSet(value: manager.getCPUTemp())
-        BatteryTempLabel.stringValue=GetStringToSet(value: manager.getBatteryTemp())
-        HDTempLabel.stringValue=GetStringToSet(value: manager.getHDTemp())
+        CPUTempLabel.stringValue=manager.GetCPUTempString()
+        BatteryTempLabel.stringValue=manager.GetBatteryTempString()
+        HDTempLabel.stringValue=manager.GetHDTempString()
     }
     
     @IBAction func UpdateButtonPushed(_ sender: Any) {
