@@ -30,8 +30,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var HDTempLabel: NSTextField!
     
     func GetStringToSet(value: Double) -> String {
-        var string=""
-        if(value > -127){
+        var string="Error:-("
+        if(value > -1){
             string=String(value)+"°C"
         }
         
