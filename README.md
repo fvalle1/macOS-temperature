@@ -9,6 +9,7 @@ The app show temperature of:
 - Hard Disk
 
 # Download
+[![Download macOS-temperature](https://img.shields.io/sourceforge/dm/macos-temperature.svg)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
 
 [![Download macOS-temperature](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
 
