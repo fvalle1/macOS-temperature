@@ -19,20 +19,21 @@
 
 import Cocoa
 
+
 class ViewController: NSViewController {
     @IBOutlet weak var GetTempButton: NSButton!
    
-    @IBOutlet weak var CPUTempLabel: NSTextField!
+    @IBOutlet weak var CPUTempLabel: PositiveLabel!
 
-    @IBOutlet weak var BatteryTempLabel: NSTextField!
+    @IBOutlet weak var BatteryTempLabel: PositiveLabel!
     
-    @IBOutlet weak var HDTempLabel: NSTextField!
+    @IBOutlet weak var HDTempLabel: PositiveLabel!
     
     func updateAllValues(){
         let manager=TemperatureManager()
-        CPUTempLabel.stringValue=String(manager.getCPUTemp())+"°C"
-        BatteryTempLabel.stringValue=String(manager.getBatteryTemp())+"°C"
-        HDTempLabel.stringValue=String(manager.getHDTemp())+"°C"
+        CPUTempLabel.Set(value: manager.getCPUTemp())
+        BatteryTempLabel.Set(value: manager.getBatteryTemp())
+        HDTempLabel.Set(value: manager.getHDTemp())
     }
     
     @IBAction func UpdateButtonPushed(_ sender: Any) {

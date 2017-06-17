@@ -16,6 +16,7 @@
 		4113B9F61EED0D7F002B6251 /* TemperatureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113B9F51EED0D7F002B6251 /* TemperatureUITests.swift */; };
 		4113BA0D1EED14E6002B6251 /* TemperatureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4113BA0C1EED14E6002B6251 /* TemperatureManager.m */; };
 		41A1EF0A1EEF1AC5003087B6 /* smc.c in Sources */ = {isa = PBXBuildFile; fileRef = 41A1EF081EEF1AC5003087B6 /* smc.c */; };
+		41E91D931EF52A96002BA6D7 /* PositiveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E91D921EF52A96002BA6D7 /* PositiveLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4113BA0F1EED1864002B6251 /* TempArrays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempArrays.h; sourceTree = "<group>"; };
 		41A1EF081EEF1AC5003087B6 /* smc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = smc.c; sourceTree = "<group>"; };
 		41A1EF091EEF1AC5003087B6 /* smc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
+		41E91D921EF52A96002BA6D7 /* PositiveLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositiveLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		4113B9CA1EED0D7E002B6251 = {
 			isa = PBXGroup;
 			children = (
+				41E91D921EF52A96002BA6D7 /* PositiveLabel.swift */,
 				4113BA0C1EED14E6002B6251 /* TemperatureManager.m */,
 				4113BA0F1EED1864002B6251 /* TempArrays.h */,
 				4113BA0E1EED1622002B6251 /* TemperatureManager.h */,
@@ -279,6 +282,7 @@
 				4113BA0D1EED14E6002B6251 /* TemperatureManager.m in Sources */,
 				4113B9D91EED0D7E002B6251 /* ViewController.swift in Sources */,
 				41A1EF0A1EEF1AC5003087B6 /* smc.c in Sources */,
+				41E91D931EF52A96002BA6D7 /* PositiveLabel.swift in Sources */,
 				4113B9D71EED0D7E002B6251 /* AppDelegate.swift in Sources */,
 				4113B9DB1EED0D7E002B6251 /* Document.swift in Sources */,
 			);
