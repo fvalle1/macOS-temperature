@@ -42,6 +42,7 @@ class ViewController: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window!.title="macOS Temperature"
+        self.view.window!.backgroundColor=NSColor.cyan
     }
     
     override func viewDidLoad() {
