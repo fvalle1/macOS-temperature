@@ -17,6 +17,10 @@
     return self;
 }
 
+-(void)dealloc{
+    SMCClose();
+};
+
 -(double) GetTemp
 {
     int max=50;

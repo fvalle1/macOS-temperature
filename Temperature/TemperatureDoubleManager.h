@@ -20,6 +20,7 @@
     
 }
 
+-(void) dealloc;
 -(double) GetTemp;
 -(double) GetTemp: (char*) key;
 -(double) GetCPUTemp;

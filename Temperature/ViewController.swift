@@ -56,6 +56,8 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override var representedObject: Any? {
         didSet {
