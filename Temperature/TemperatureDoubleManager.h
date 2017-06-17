@@ -15,7 +15,7 @@
 #import "TempArrays.h"
 
 
-@interface TemperatureManager:NSObject
+@interface TemperatureDoubleManager:NSObject
 {
     
 }

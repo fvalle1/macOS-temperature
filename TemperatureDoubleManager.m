@@ -7,9 +7,9 @@
 //
 
 
-#include "TemperatureManager.h"
+#include "TemperatureDoubleManager.h"
 
-@implementation TemperatureManager
+@implementation TemperatureDoubleManager
 
 -(id)init
 {

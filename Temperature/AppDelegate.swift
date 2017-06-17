@@ -11,7 +11,16 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    @IBOutlet var statusMenu: NSMenu!
+    var statusBarItem : NSStatusItem?
+    
+    
+    override func awakeFromNib() {
+        let statusBar = NSStatusBar.system()
+        statusBarItem = statusBar.statusItem(withLength: CGFloat(NSVariableStatusItemLength))
+        statusBarItem!.menu = statusMenu
+        statusBarItem!.title = "Temp:"
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application

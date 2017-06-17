@@ -22,6 +22,7 @@ import Cocoa
 
 class ViewController: NSViewController {
     var fTimer=Timer()
+    let fTimerTime=0.8;
     
     @IBOutlet weak var GetTempButton: NSButton!
    
@@ -48,6 +49,7 @@ class ViewController: NSViewController {
     @IBAction func UpdateButtonPushed(_ sender: Any) {
         fTimer.invalidate()
         UpdateAllValues()
+        fTimer = Timer.scheduledTimer(timeInterval: fTimerTime, target: self, selector: #selector(self.UpdateAllValues), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear() {
@@ -58,7 +60,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fTimer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(self.UpdateAllValues), userInfo: nil, repeats: true)
+        fTimer = Timer.scheduledTimer(timeInterval: fTimerTime, target: self, selector: #selector(self.UpdateAllValues), userInfo: nil, repeats: true)
 
         // Do any additional setup after loading the view.
     }

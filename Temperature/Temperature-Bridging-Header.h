@@ -3,4 +3,4 @@
 //
 
 #include "smc.h"
-#include "TemperatureManager.h"
+#include "TemperatureDoubleManager.h"
