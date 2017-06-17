@@ -21,6 +21,8 @@ import Cocoa
 
 
 class ViewController: NSViewController {
+    var fTimer=Timer()
+    
     @IBOutlet weak var GetTempButton: NSButton!
    
     @IBOutlet weak var CPUTempLabel: NSTextField!
@@ -36,7 +38,7 @@ class ViewController: NSViewController {
         return string
     }
     
-    func UpdateAllValues(){
+    @objc func UpdateAllValues(){
         let manager=TemperatureManager()
         CPUTempLabel.stringValue=GetStringToSet(value: manager.getCPUTemp())
         BatteryTempLabel.stringValue=GetStringToSet(value: manager.getBatteryTemp())
@@ -44,6 +46,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func UpdateButtonPushed(_ sender: Any) {
+        fTimer.invalidate()
         UpdateAllValues()
     }
     
@@ -55,7 +58,8 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fTimer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(self.UpdateAllValues), userInfo: nil, repeats: true)
+
         // Do any additional setup after loading the view.
     }
 
