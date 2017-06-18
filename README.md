@@ -38,4 +38,6 @@ My work includes libraries from:
 *Apple System Management Control (SMC) Tool*
 Copyright (C) 2006 devnull
 
-For more details, please see [LICENCE](LICENCE)
+I got the icon of the *termometer* from the **public domain** at [https://openclipart.org/detail/85069/pixzain-thermometer](https://openclipart.org/detail/85069/pixzain-thermometer) where it was released under [Creative commons CC0 license](https://creativecommons.org/publicdomain/zero/1.0/)
+
+For full details, please see [LICENCE](LICENCE)
