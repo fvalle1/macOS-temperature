@@ -29,20 +29,32 @@ class ViewController: NSViewController {
     @IBOutlet weak var CPUTempLabel: NSTextField!
     @IBOutlet weak var BatteryTempLabel: NSTextField!
     @IBOutlet weak var HDTempLabel: NSTextField!
-    
-   
-    @objc func UpdateAllValues(){
+       
+    @objc func RefreshAllValues(){
         let manager=TemperatureManager()
         CPUTempLabel.stringValue=manager.GetCPUTempString()
         BatteryTempLabel.stringValue=manager.GetBatteryTempString()
         HDTempLabel.stringValue=manager.GetHDTempString()
     }
     
-    @IBAction func UpdateButtonPushed(_ sender: Any) {
+    @IBAction func RefreshButtonPushed(_ sender: Any) {
         fTimer.invalidate()
-        UpdateAllValues()
-        fTimer = Timer.scheduledTimer(timeInterval: fTimerTime, target: self, selector: #selector(self.UpdateAllValues), userInfo: nil, repeats: true)
+        RefreshAllValues()
+        fTimer = Timer.scheduledTimer(timeInterval: fTimerTime, target: self, selector: #selector(self.RefreshAllValues), userInfo: nil, repeats: true)
     }
+    
+    
+//    func webView(){
+//        let url=NSURL(string:"")
+//        var webView: WebView
+//        webView.load(url)
+//    }
+//    
+//    @IBAction func CheckUpdateButtonPushed(_ sender: Any) {
+//        self.webView()
+//    }
+    
+    
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -52,7 +64,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fTimer = Timer.scheduledTimer(timeInterval: fTimerTime, target: self, selector: #selector(self.UpdateAllValues), userInfo: nil, repeats: true)
+        fTimer = Timer.scheduledTimer(timeInterval: fTimerTime, target: self, selector: #selector(self.RefreshAllValues), userInfo: nil, repeats: true)
 
         // Do any additional setup after loading the view.
     }
@@ -67,7 +79,7 @@ class ViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        UpdateAllValues()   //Your API method call
+        RefreshAllValues()   //Your API method call
     }
 
 
