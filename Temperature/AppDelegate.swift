@@ -19,9 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarItem!.title = tempManager.GetCPUTempString()
     }
     
-    @IBAction func About(_ sender: Any) {
-    }
-    
     override func awakeFromNib() {
         let statusBar = NSStatusBar.system()
         statusBarItem = statusBar.statusItem(withLength: CGFloat(NSVariableStatusItemLength))

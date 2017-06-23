@@ -15,7 +15,7 @@ class TemperatureManager: TemperatureDoubleManager {
     }
     
     func GetStringToSet(value: Double) -> String {
-        var string="Error:-("
+        var string="Error 😔"
         if(value > -1){
             string=String(format:"%.2f",value)+"°C"
         }

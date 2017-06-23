@@ -16,8 +16,9 @@
 		4113B9F61EED0D7F002B6251 /* TemperatureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113B9F51EED0D7F002B6251 /* TemperatureUITests.swift */; };
 		4113BA0D1EED14E6002B6251 /* TemperatureDoubleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4113BA0C1EED14E6002B6251 /* TemperatureDoubleManager.m */; };
 		4114C1BD1EF5839B004B3C27 /* TemperatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4114C1BC1EF5839B004B3C27 /* TemperatureManager.swift */; };
-		4114C1C21EF5910C004B3C27 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4114C1C11EF5910C004B3C27 /* MenuManager.swift */; };
+		4114C1C21EF5910C004B3C27 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4114C1C11EF5910C004B3C27 /* ApiManager.swift */; };
 		41A1EF0A1EEF1AC5003087B6 /* smc.c in Sources */ = {isa = PBXBuildFile; fileRef = 41A1EF081EEF1AC5003087B6 /* smc.c */; };
+		41EEF5E11EFC373F00DE7CE0 /* LicenseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EEF5E01EFC373F00DE7CE0 /* LicenseWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +57,10 @@
 		4113BA0E1EED1622002B6251 /* TemperatureDoubleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureDoubleManager.h; path = Temperature/TemperatureDoubleManager.h; sourceTree = "<group>"; };
 		4113BA0F1EED1864002B6251 /* TempArrays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempArrays.h; sourceTree = "<group>"; };
 		4114C1BC1EF5839B004B3C27 /* TemperatureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureManager.swift; sourceTree = "<group>"; };
-		4114C1C11EF5910C004B3C27 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		4114C1C11EF5910C004B3C27 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		41A1EF081EEF1AC5003087B6 /* smc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = smc.c; sourceTree = "<group>"; };
 		41A1EF091EEF1AC5003087B6 /* smc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
+		41EEF5E01EFC373F00DE7CE0 /* LicenseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +118,12 @@
 				41A1EF091EEF1AC5003087B6 /* smc.h */,
 				4113B9D61EED0D7E002B6251 /* AppDelegate.swift */,
 				4113B9D81EED0D7E002B6251 /* ViewController.swift */,
+				41EEF5E01EFC373F00DE7CE0 /* LicenseWindow.swift */,
 				4114C1BC1EF5839B004B3C27 /* TemperatureManager.swift */,
 				4113B9DA1EED0D7E002B6251 /* Document.swift */,
 				4113B9DC1EED0D7E002B6251 /* Assets.xcassets */,
 				4113B9DE1EED0D7E002B6251 /* Main.storyboard */,
-				4114C1C11EF5910C004B3C27 /* MenuManager.swift */,
+				4114C1C11EF5910C004B3C27 /* ApiManager.swift */,
 				4113B9E11EED0D7E002B6251 /* Info.plist */,
 				4113BA041EED0F39002B6251 /* Temperature-Bridging-Header.h */,
 			);
@@ -290,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4114C1C21EF5910C004B3C27 /* MenuManager.swift in Sources */,
+				4114C1C21EF5910C004B3C27 /* ApiManager.swift in Sources */,
+				41EEF5E11EFC373F00DE7CE0 /* LicenseWindow.swift in Sources */,
 				4113BA0D1EED14E6002B6251 /* TemperatureDoubleManager.m in Sources */,
 				4113B9D91EED0D7E002B6251 /* ViewController.swift in Sources */,
 				41A1EF0A1EEF1AC5003087B6 /* smc.c in Sources */,
