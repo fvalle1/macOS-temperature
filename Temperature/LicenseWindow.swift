@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import Cocoa
+
+class LicenseWindowController: NSViewController {
+
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window!.title="GPL License"
+        self.view.window!.backgroundColor=NSColor.red
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}

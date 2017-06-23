@@ -29,7 +29,6 @@ class ViewController: NSViewController {
     @IBOutlet weak var CPUTempLabel: NSTextField!
     @IBOutlet weak var HDTempLabel: NSTextField!
     @IBOutlet weak var BatteryTempLabel: NSTextField!
-    @IBOutlet weak var messagesArea: NSTextField!
 
     
     @objc func RefreshAllValues(){
@@ -55,14 +54,6 @@ class ViewController: NSViewController {
 //    @IBAction func CheckUpdateButtonPushed(_ sender: Any) {
 //        self.webView()
 //    }
-    
-    
-    
-    @IBAction func CheckUpdateButtonPushed(_ sender: Any) {
-        let manager = ApiManager(url:"https://warm-earth-14163.herokuapp.com/Temperature_version.php")
-        manager.Call(method: "?key=xenoncursedavitindiesyb", fieldToFill: messagesArea)
-        messagesArea.stringValue=String(manager.GetLastCallData())
-    }
     
     
     override func viewDidAppear() {

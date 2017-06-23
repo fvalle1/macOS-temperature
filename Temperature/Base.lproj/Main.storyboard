@@ -20,6 +20,7 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="About:" target="Voe-Tx-rLC" id="fn1-uN-FYg"/>
+                                                <segue destination="qnW-lQ-vrG" kind="show" id="6Kn-KA-lLH"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -146,7 +147,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Temperature" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="599" y="-139"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -165,6 +166,44 @@
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--License Window Controller-->
+        <scene sceneID="nQq-RM-IrI">
+            <objects>
+                <viewController id="qnW-lQ-vrG" customClass="LicenseWindowController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Hna-Yy-wM2">
+                        <rect key="frame" x="0.0" y="0.0" width="466" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzJ-62-dN7">
+                                <rect key="frame" x="3" y="22" width="456" height="255"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="qKm-wo-MD9">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">    Copyright (C) 2017  Filippo Valle
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="vUb-C4-qqp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="207"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -235,44 +274,35 @@
                                     <action selector="RefreshButtonPushed:" target="5gI-5U-AMq" id="IIm-Ad-JAb"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2s9-PJ-YKI">
-                                <rect key="frame" x="113" y="39" width="202" height="32"/>
-                                <buttonCell key="cell" type="push" title="Check for App updates 📲" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mYg-Em-CMs">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OCI-0j-wZG">
+                                <rect key="frame" x="121" y="33" width="185" height="32"/>
+                                <buttonCell key="cell" type="push" title="Check For App Updates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bD9-RE-4JU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="CheckUpdateButtonPushed:" target="5gI-5U-AMq" id="XRj-sN-Yce"/>
+                                    <segue destination="BgP-ZP-ex8" kind="show" id="wOQ-ke-7Su"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76h-UG-lhK">
-                                <rect key="frame" x="181" y="24" width="65" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="messages" id="DsU-nY-lgW">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="QSK-dF-PrZ" firstAttribute="leading" secondItem="Q0u-Xc-zKy" secondAttribute="trailing" constant="59" id="069-Qa-lcl"/>
                             <constraint firstItem="JnA-fh-e4e" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="7E8-ai-A8D"/>
+                            <constraint firstItem="OCI-0j-wZG" firstAttribute="top" secondItem="JnA-fh-e4e" secondAttribute="bottom" constant="12" id="Ajq-97-5yT"/>
                             <constraint firstItem="Tde-uJ-SVs" firstAttribute="leading" secondItem="PMh-Kj-F5K" secondAttribute="leading" id="BZv-ZL-0yC"/>
                             <constraint firstItem="fDV-fH-hVY" firstAttribute="leading" secondItem="opX-Jf-0zQ" secondAttribute="leading" id="Fvg-Dc-lVZ"/>
                             <constraint firstItem="PMh-Kj-F5K" firstAttribute="baseline" secondItem="opX-Jf-0zQ" secondAttribute="baseline" id="Jm1-UT-lIL"/>
-                            <constraint firstItem="76h-UG-lhK" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="Kqe-73-Adc"/>
+                            <constraint firstAttribute="bottom" secondItem="JnA-fh-e4e" secondAttribute="bottom" constant="73" id="OSG-Nm-9rz"/>
                             <constraint firstItem="PMh-Kj-F5K" firstAttribute="leading" secondItem="Q0u-Xc-zKy" secondAttribute="leading" id="Olv-2c-BhN"/>
-                            <constraint firstItem="2s9-PJ-YKI" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="RaO-MJ-ao4"/>
                             <constraint firstItem="Q0u-Xc-zKy" firstAttribute="top" secondItem="PMh-Kj-F5K" secondAttribute="bottom" constant="20" id="VOJ-AK-3dE"/>
                             <constraint firstItem="PMh-Kj-F5K" firstAttribute="top" secondItem="Tde-uJ-SVs" secondAttribute="bottom" constant="16" id="Vo0-NI-yKh"/>
                             <constraint firstItem="JnA-fh-e4e" firstAttribute="top" secondItem="Q0u-Xc-zKy" secondAttribute="bottom" constant="58" id="Xr6-Ud-fTV" userLabel="Get Temp Button.top = HardDisk.bottom + 50"/>
                             <constraint firstItem="opX-Jf-0zQ" firstAttribute="trailing" secondItem="QSK-dF-PrZ" secondAttribute="trailing" id="jcU-ws-Ivn"/>
                             <constraint firstItem="fDV-fH-hVY" firstAttribute="trailing" secondItem="opX-Jf-0zQ" secondAttribute="trailing" id="klb-OM-TLM"/>
                             <constraint firstItem="opX-Jf-0zQ" firstAttribute="leading" secondItem="QSK-dF-PrZ" secondAttribute="leading" id="n51-3o-PoL"/>
-                            <constraint firstItem="76h-UG-lhK" firstAttribute="top" secondItem="2s9-PJ-YKI" secondAttribute="bottom" constant="5" id="oUO-M8-pbQ"/>
                             <constraint firstItem="Tde-uJ-SVs" firstAttribute="baseline" secondItem="fDV-fH-hVY" secondAttribute="baseline" id="qQM-gO-61L"/>
+                            <constraint firstItem="OCI-0j-wZG" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="rxO-bN-0Dc"/>
                             <constraint firstItem="Q0u-Xc-zKy" firstAttribute="baseline" secondItem="QSK-dF-PrZ" secondAttribute="baseline" id="twy-Fi-gym"/>
-                            <constraint firstItem="2s9-PJ-YKI" firstAttribute="top" secondItem="JnA-fh-e4e" secondAttribute="bottom" constant="6" id="uuZ-1X-DYT"/>
                             <constraint firstAttribute="trailing" secondItem="fDV-fH-hVY" secondAttribute="trailing" constant="20" symbolic="YES" id="vry-En-nVK"/>
                             <constraint firstItem="Tde-uJ-SVs" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="47" id="wpD-mp-eAj"/>
                         </constraints>
@@ -285,12 +315,65 @@
                         <outlet property="HDTempLabel" destination="QSK-dF-PrZ" id="ugs-7b-dCQ"/>
                         <outlet property="TempLabel" destination="fDV-fH-hVY" id="CAC-wv-bKl"/>
                         <outlet property="aa" destination="opX-Jf-0zQ" id="H9D-7h-ZYf"/>
-                        <outlet property="messagesArea" destination="76h-UG-lhK" id="WPB-vZ-IeV"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.5" y="696"/>
+            <point key="canvasLocation" x="76" y="656"/>
+        </scene>
+        <!--Update View Controller-->
+        <scene sceneID="HvY-jD-v0w">
+            <objects>
+                <viewController id="BgP-ZP-ex8" customClass="UpdateViewController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="dKr-uu-cI7">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxf-hQ-6cP">
+                                <rect key="frame" x="177" y="195" width="96" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="current version" id="92W-Jo-Qod">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="L90-LG-Tbb">
+                                <rect key="frame" x="138" y="95" width="175" height="32"/>
+                                <buttonCell key="cell" type="push" title="Check for updates 📲" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cyA-XM-75R">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="UpdateButtunPushed:" target="BgP-ZP-ex8" id="Fc9-rQ-n3g"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duK-1r-4D0">
+                                <rect key="frame" x="163" y="141" width="125" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="more recent version" id="ADW-cv-H17">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oxf-hQ-6cP" firstAttribute="top" secondItem="dKr-uu-cI7" secondAttribute="top" constant="88" id="EWi-IR-HvI"/>
+                            <constraint firstItem="duK-1r-4D0" firstAttribute="centerX" secondItem="dKr-uu-cI7" secondAttribute="centerX" id="Hgc-pJ-zwS"/>
+                            <constraint firstItem="duK-1r-4D0" firstAttribute="top" secondItem="oxf-hQ-6cP" secondAttribute="bottom" constant="37" id="Ui3-FM-SAW"/>
+                            <constraint firstItem="oxf-hQ-6cP" firstAttribute="centerX" secondItem="dKr-uu-cI7" secondAttribute="centerX" id="Zpl-yG-O9h"/>
+                            <constraint firstItem="L90-LG-Tbb" firstAttribute="centerX" secondItem="dKr-uu-cI7" secondAttribute="centerX" id="c7T-C2-dIE"/>
+                            <constraint firstItem="L90-LG-Tbb" firstAttribute="top" secondItem="oxf-hQ-6cP" secondAttribute="bottom" constant="72" id="pnP-2Z-ded"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentArea" destination="oxf-hQ-6cP" id="e1u-fL-hco"/>
+                        <outlet property="messagesArea" destination="oxf-hQ-6cP" id="aVe-lf-tUP"/>
+                        <outlet property="newestArea" destination="duK-1r-4D0" id="bqg-Wv-9fH"/>
+                    </connections>
+                </viewController>
+                <customObject id="Q4C-sf-uRr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="656"/>
         </scene>
     </scenes>
 </document>

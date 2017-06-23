@@ -11,6 +11,7 @@ import Cocoa
 class ApiManager: NSObject {
     
     var url:String!
+    var urlAsURL:URL!
     var task:URLSessionDataTask!
     var result:[String:Any]
     var resultString:String
@@ -18,6 +19,7 @@ class ApiManager: NSObject {
     
     override init() {
         self.url = ""
+        self.urlAsURL=URL(string: url)
         self.wasCalled=false
         self.resultString=""
         self.result=[:]
@@ -25,19 +27,40 @@ class ApiManager: NSObject {
     
     init(url:String) {
         self.url = url
+        self.urlAsURL=URL(string: url)
         self.wasCalled=false
         self.resultString=""
         self.result=[:]
     }
     
-    func Call(method:String, fieldToFill: NSTextField){
+    func Call(method:String){
         wasCalled=true
-        let urlToCall = URL(string:(url+method))
+        urlAsURL = URL(string:(url+method))
         
-        _ = URLRequest(url: urlToCall!)
+        //_ = URLRequest(url: urlToCall!)
         //print(url)
                 
-        self.task = URLSession.shared.dataTask(with: urlToCall! as URL){(data, response, error) in
+        self.task = URLSession.shared.dataTask(with: urlAsURL! as URL){(data, response, error) in
+            
+            // check for any errors
+            guard error == nil else {
+                print("error calling GET on /todos/1")
+                print(error!)
+                return
+            }
+            // make sure we got data
+            guard data != nil else {
+                print("Error: did not receive data")
+                return
+            }
+        }
+        task.resume();
+    }
+    
+    func FillNSTextFieldWithKey(key: String, field:NSTextField){
+        wasCalled=true
+        
+        self.task = URLSession.shared.dataTask(with: urlAsURL! as URL){(data, response, error) in
             
             // check for any errors
             guard error == nil else {
@@ -58,31 +81,24 @@ class ApiManager: NSObject {
                         return
                 }
                 
+                field.stringValue=todo.description
+                
+                guard let toReturn = self.result[key] as? String else {
+                    print("Could not get \(key) from JSON")
+                    return
+                }
                 
                 self.result=todo
                 self.resultString=todo.description
                 
-                fieldToFill.stringValue=todo.description
+                field.stringValue=toReturn
                 
             } catch  {
                 print("error trying to convert data to JSON")
             }
         }
         task.resume();
-    }
-    
-    func GetLastCallData(key: String)->String{
-        if(!self.wasCalled){
-            return ""
-        }
         
-        guard let toReturn = self.result[key] as? String else {
-            print("Could not get \(key) from JSON")
-            return ""
-        }
-        
-        print (toReturn)
-        return toReturn
     }
     
     func GetLastCallData()->String{
