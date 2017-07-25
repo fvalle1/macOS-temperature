@@ -56,24 +56,27 @@ class ViewController: NSViewController {
 //    }
     
     
-    override func viewDidAppear() {
-        super.viewDidAppear()
+    func setStyle(){
         self.view.window!.title="macOS Temperature"
         self.view.window!.backgroundColor=NSColor.cyan
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        setStyle()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fTimer = Timer.scheduledTimer(timeInterval: fTimerTime, target: self, selector: #selector(self.RefreshAllValues), userInfo: nil, repeats: true)
 
-        // Do any additional setup after loading the view.
     }
     
     
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            setStyle()
         }
     }
     
