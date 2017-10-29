@@ -17,6 +17,7 @@ class UpdateViewController:NSViewController{
     @IBOutlet weak var newestArea: NSTextField!
 
     
+    
     @IBAction func UpdateButtunPushed(_ sender: Any) {
         
         currentArea.stringValue="You are using:"+currentVersionString
@@ -25,14 +26,29 @@ class UpdateViewController:NSViewController{
         manager.FillNSTextFieldWithKey(key: "version", field: newestArea)
     }
     
-    override func viewDidAppear() {
-        super.viewDidAppear()
+    @IBAction func DownloadButtonPushed(_ sender: Any) {
+        //AppDelegate.gotodo
+        //openURL(URL(string: "http://www.stackoverflow.com")!)
+    }
+    
+    func setStyle(){
         self.view.window!.title="MacOs Temperature"
         self.view.window!.backgroundColor=NSColor.blue
     }
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        setStyle()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override var representedObject: Any? {
+        didSet {
+            setStyle()
+        }
     }
     
 }

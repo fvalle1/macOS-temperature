@@ -82,7 +82,7 @@ class ViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        RefreshAllValues()   //Your API method call
+        RefreshAllValues()
     }
 
 
