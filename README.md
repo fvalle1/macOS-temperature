@@ -1,7 +1,7 @@
 # macOS-temperature
 ![](https://img.shields.io/github/release/qubyte/rubidium.svg)
 [![Download macOS-temperature](https://img.shields.io/sourceforge/dm/macos-temperature.svg)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
-![](https://img.shields.io/sourceforge/dt/arianne/stendhal.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec527ea9c3b0443fa2fbf020a474ad0f)](https://www.codacy.com/app/fvalle1/macOS-temperature?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fvalle1/macOS-temperature&amp;utm_campaign=Badge_Grade)
 [![Gplv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/)
 
 <a href="https://openclipart.org/detail/85069/pixzain-thermometer" target="_Blank"><img src="https://openclipart.org/download/85069/pixzain-thermometer.svg" height="100"/></a>
