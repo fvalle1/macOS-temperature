@@ -1,4 +1,9 @@
 # macOS-temperature
+![](https://img.shields.io/github/release/qubyte/rubidium.svg)
+[![Download macOS-temperature](https://img.shields.io/sourceforge/dm/macos-temperature.svg)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
+![](https://img.shields.io/sourceforge/dt/arianne/stendhal.svg)
+[![Gplv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/)
+
 <a href="https://openclipart.org/detail/85069/pixzain-thermometer" target="_Blank"><img src="https://openclipart.org/download/85069/pixzain-thermometer.svg" height="100"/></a>
 
 Simple App to monitor Mac Temperature
@@ -9,7 +14,6 @@ The app show temperature of:
 - Hard Disk
 
 # Download
-[![Download macOS-temperature](https://img.shields.io/sourceforge/dm/macos-temperature.svg)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
 
 [![Download macOS-temperature](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
 
