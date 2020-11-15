@@ -15,7 +15,7 @@ The app show temperature of:
 
 # Download
 
-[![Download macOS-temperature](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
+[![Download macOS-temperature](Temperature.icns)](https://sourceforge.net/projects/macos-temperature/files/latest/download)
 
 # Contribute
 
