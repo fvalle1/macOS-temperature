@@ -4,7 +4,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec527ea9c3b0443fa2fbf020a474ad0f)](https://www.codacy.com/app/fvalle1/macOS-temperature?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fvalle1/macOS-temperature&amp;utm_campaign=Badge_Grade)
 [![Gplv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/)
 
-![Icon](Temperature.icns)
+![Icon](Temperature.png)
 
 Simple App to monitor Mac Temperature
 
