@@ -99,17 +99,17 @@ typedef struct {
 } SMCVal_t;
 
 kern_return_t SMCOpen(void);
-kern_return_t SMCClose();
+kern_return_t SMCClose(void);
 
 // prototypes
-const int hasBattery();
+const int hasBattery(void);
 float SMCGetFanSpeed(int fanNum);
-int SMCGetFanNumber();
+int SMCGetFanNumber(void);
 double SMCGetTemperature(char *key);
-const char* getBatteryHealth();
-int getDesignCycleCount();
-int getBatteryCharge();
-int get_battery_time_remaining();
+const char* getBatteryHealth(void);
+int getDesignCycleCount(void);
+int getBatteryCharge(void);
+int get_battery_time_remaining(void);
 CFTypeRef IOPSCopyPowerSourcesInfo(void);
 CFArrayRef IOPSCopyPowerSourcesList(CFTypeRef blob);
 CFDictionaryRef IOPSGetPowerSourceDescription(CFTypeRef blob, CFTypeRef ps);

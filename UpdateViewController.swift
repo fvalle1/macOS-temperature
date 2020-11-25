@@ -11,7 +11,7 @@ import Cocoa
 
 class UpdateViewController:NSViewController{
     
-    let currentVersionString="1.0.2"
+    let currentVersionString="2.0.0"
     
     @IBOutlet weak var currentArea: NSTextField!
     @IBOutlet weak var newestArea: NSTextField!

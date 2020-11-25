@@ -14,14 +14,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var statusMenu: NSMenu!
     var statusBarItem : NSStatusItem?
     
-    func UpdateValue() -> Void {
+    @objc func UpdateValue() -> Void {
         let tempManager=TemperatureManager()
-        statusBarItem!.title = tempManager.GetCPUTempString()
+        statusBarItem!.button?.title = tempManager.GetCPUTempString()
     }
     
     override func awakeFromNib() {
-        let statusBar = NSStatusBar.system()
-        statusBarItem = statusBar.statusItem(withLength: CGFloat(NSVariableStatusItemLength))
+        let statusBar = NSStatusBar.system
+        statusBarItem = statusBar.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
         statusBarItem!.menu = statusMenu
         self.UpdateValue()
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.UpdateValue), userInfo: nil, repeats: true)
