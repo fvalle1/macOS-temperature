@@ -1,0 +1,15 @@
+bucket:
+  strip: 1
+packages:
+  - name: macosTemperature
+    web: false
+    actions:
+      - name: getLatestVersion
+        runtime: python:3
+        limits:
+          timeout: 60000
+      - name: getUpdates
+        runtime: python:3
+        limits:
+          timeout: 60000
+

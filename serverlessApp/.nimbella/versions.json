@@ -1,0 +1,23 @@
+[
+  {
+    "apihost": "https://apigcp.nimbella.io",
+    "namespace": "filippov-hko4rv9s2jb",
+    "packageVersions": {
+      "macosTemperature": {
+        "version": "0.0.1",
+        "digest": "4c078e1171e12824e1ead449f48006b4b32b9a26c2181ce5e10196bcf89c6015"
+      }
+    },
+    "actionVersions": {
+      "macosTemperature/getLatestVersion": {
+        "version": "0.0.1",
+        "digest": "35977e25288c063aaad4423834ea5cfd5aa13d3fa292feafa3c6546d601076ac"
+      },
+      "macosTemperature/getUpdates": {
+        "version": "0.0.1",
+        "digest": "5e7259d15dfcda89d19f0a3c6a7f06c467e6e8c28058665379abfa273b2c5eea"
+      }
+    },
+    "webHashes": {}
+  }
+]

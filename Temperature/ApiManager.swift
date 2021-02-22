@@ -14,7 +14,7 @@ class ApiManager: NSObject {
     var urlAsURL:URL!
     var task:URLSessionDataTask!
     var result:[String:Any]
-    var resultString:String
+    var resultString:String?
     var wasCalled:Bool
     
     override init() {
@@ -44,7 +44,7 @@ class ApiManager: NSObject {
             
             // check for any errors
             guard error == nil else {
-                print("error calling GET on /todos/1")
+                print("error calling GET")
                 print(error!)
                 return
             }
@@ -64,7 +64,7 @@ class ApiManager: NSObject {
             
             // check for any errors
             guard error == nil else {
-                print("error calling GET on /todos/1")
+                print("error calling GET")
                 print(error!)
                 return
             }
@@ -80,32 +80,28 @@ class ApiManager: NSObject {
                         print("error trying to convert data to JSON")
                         return
                 }
-                
-                field.stringValue=todo.description
-                
+                     
+                self.result = todo
                 guard let toReturn = self.result[key] as? String else {
                     print("Could not get \(key) from JSON")
                     return
                 }
-                
-                self.result=todo
-                self.resultString=todo.description
-                
-                field.stringValue=toReturn
-                
+            
+                field.stringValue = "Version "+toReturn+" is available"
+                self.resultString = toReturn as String
+                                
             } catch  {
-                print("error trying to convert data to JSON")
+                print("Error trying to convert data to JSON")
             }
         }
         task.resume();
-        
     }
     
     func GetLastCallData()->String{
         if(!self.wasCalled){
             return ""
         }
-        return self.resultString
+        return self.resultString ?? ""
     }
     
     

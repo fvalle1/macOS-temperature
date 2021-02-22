@@ -11,7 +11,7 @@ import Cocoa
 
 class UpdateViewController:NSViewController{
     
-    let currentVersionString="2.0.0"
+    let currentVersionString="2.0.1"
     
     @IBOutlet weak var currentArea: NSTextField!
     @IBOutlet weak var newestArea: NSTextField!
@@ -21,9 +21,9 @@ class UpdateViewController:NSViewController{
     @IBAction func UpdateButtunPushed(_ sender: Any) {
         
         currentArea.stringValue="You are using:"+currentVersionString
-        let manager=ApiManager(url:"https://warm-earth-14163.herokuapp.com/")
-        manager.Call(method:"Temperature_version.php?key=xenoncursedavitindiesyb")
-        manager.FillNSTextFieldWithKey(key: "version", field: newestArea)
+        let manager=ApiManager(url:"https://filippov-hko4rv9s2jb-apigcp.nimbella.io/api/macosTemperature/getLatestVersion")
+        manager.Call(method:"")
+        manager.FillNSTextFieldWithKey(key: "version", field:newestArea);
     }
     
     @IBAction func DownloadButtonPushed(_ sender: Any) {
