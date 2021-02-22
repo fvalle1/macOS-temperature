@@ -27,8 +27,11 @@ class UpdateViewController:NSViewController{
     }
     
     @IBAction func DownloadButtonPushed(_ sender: Any) {
-        //AppDelegate.gotodo
-        //openURL(URL(string: "http://www.stackoverflow.com")!)
+        if let url = URL(string: "https://sourceforge.net/projects/macos-temperature/files/latest/download") {
+                let dataFromURL = try? Data(contentsOf: url)
+            let fileManager = FileManager.default
+            fileManager.createFile(atPath: "~/Downloads", contents: dataFromURL, attributes: nil)
+        }
     }
     
     func setStyle(){
