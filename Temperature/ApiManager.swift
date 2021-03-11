@@ -55,12 +55,12 @@ class ApiManager: NSObject {
             }
         }
         task.resume();
-    }
+    };
     
-    func FillNSTextFieldWithKey(key: String, field:NSTextField){
+    func FillNSTextFieldWithKey(key: String, semaphore: DispatchSemaphore) -> Void{
         wasCalled=true
         
-        self.task = URLSession.shared.dataTask(with: urlAsURL! as URL){(data, response, error) in
+        self.task = URLSession.shared.dataTask(with: urlAsURL! as URL){ [self](data, response, error) in
             
             // check for any errors
             guard error == nil else {
@@ -86,10 +86,9 @@ class ApiManager: NSObject {
                     print("Could not get \(key) from JSON")
                     return
                 }
-            
-                field.stringValue = "Version "+toReturn+" is available"
-                self.resultString = toReturn as String
-                                
+                
+               self.resultString = toReturn as String
+               semaphore.signal()
             } catch  {
                 print("Error trying to convert data to JSON")
             }

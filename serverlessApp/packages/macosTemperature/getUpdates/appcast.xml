@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="https://filippov-hko4rv9s2jb-apigcp.nimbella.io/api/macosTemperature/getLatestVersion">
     <channel>
-        <title>MacOsTemperature - Appcast</title>
+        <title>macOSTemperature - Appcast</title>
         <item>
-            <title>Version 1.2.0</title>
+            <title>Version 2.1.0</title>
             <description>desc</description>
-            <pubDate>Mon, 22 Feb 2020 12:00:00 +0000</pubDate>
+            <pubDate>Mon, 11 Mar 2020 12:00:00 +0000</pubDate>
             <enclosure url="https://sourceforge.net/projects/macos-temperature/files/latest/download" sparkle:version="1.2.0" sparkle:os="android" />
         </item>
     </channel>

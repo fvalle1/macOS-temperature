@@ -4,18 +4,18 @@
     "namespace": "filippov-hko4rv9s2jb",
     "packageVersions": {
       "macosTemperature": {
-        "version": "0.0.1",
+        "version": "0.0.2",
         "digest": "4c078e1171e12824e1ead449f48006b4b32b9a26c2181ce5e10196bcf89c6015"
       }
     },
     "actionVersions": {
       "macosTemperature/getLatestVersion": {
-        "version": "0.0.1",
-        "digest": "35977e25288c063aaad4423834ea5cfd5aa13d3fa292feafa3c6546d601076ac"
+        "version": "0.0.2",
+        "digest": "d23a8ba4e65f3b527478fc26e8ec5aa311752257ab620f890cd056c2239819e4"
       },
       "macosTemperature/getUpdates": {
-        "version": "0.0.1",
-        "digest": "5e7259d15dfcda89d19f0a3c6a7f06c467e6e8c28058665379abfa273b2c5eea"
+        "version": "0.0.2",
+        "digest": "d8b4757b1cbd2dd5c570bc2e3a612753768f7a3f0e84b81e60d82c4c64efd1a1"
       }
     },
     "webHashes": {}

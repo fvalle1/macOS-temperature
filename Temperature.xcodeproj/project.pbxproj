@@ -219,7 +219,7 @@
 				TargetAttributes = {
 					4113B9D21EED0D7E002B6251 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -233,12 +233,14 @@
 					4113B9E51EED0D7F002B6251 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2VVSWVEGZF;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4113B9D21EED0D7E002B6251;
 					};
 					4113B9F01EED0D7F002B6251 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2VVSWVEGZF;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4113B9D21EED0D7E002B6251;
 					};
@@ -517,7 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = filippo.TemperatureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Temperature.app/Contents/MacOS/Temperature";
 			};
 			name = Debug;
@@ -537,7 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = filippo.TemperatureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Temperature.app/Contents/MacOS/Temperature";
 			};
 			name = Release;
@@ -556,7 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = filippo.TemperatureUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Temperature;
 			};
 			name = Debug;
@@ -575,7 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = filippo.TemperatureUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Temperature;
 			};
 			name = Release;
